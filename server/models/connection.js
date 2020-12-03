@@ -3,7 +3,7 @@
  mongoose.set('debug', true);
  mongoose.Promise = global.Promise;
 
- mongoose.connect("mongodb://localhost:27017/voting-db", {
+ mongoose.connect(process.env.DATABASE, {
      useUnifiedTopology: true,
      useNewUrlParser: true,
      useCreateIndex: true
