@@ -15,7 +15,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.use("/api/auth", route.auth);
-app.get('/index', (req, res) => res.json({hello:"world"}));
+app.use("/api/polls", route.polls);
+// app.get('/', (req, res) => res.json({hello:"world"}));
 
 app.use(handle.notFound);
 app.use(handle.errors);
