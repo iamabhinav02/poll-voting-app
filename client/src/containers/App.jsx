@@ -1,7 +1,10 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {Provider} from 'react-redux';
+import {BrowserRouter as Router} from 'react-router-dom';
 import decode from 'jwt-decode';
 // import api from '../services/api';
+import RouteViews from './RouteViews';
+import NavBar from './NavBar';
 import {store} from '../store';
 import {setCurrentUser, addError, setToken} from '../store/actions';
 
@@ -17,7 +20,12 @@ if (localStorage.jwtToken) {
 
 const App = () => (
     <Provider store={store}>
-        <div>App works</div>
+        <Router>
+            <React.Fragment>
+                <NavBar />
+                <RouteViews />
+            </React.Fragment>
+        </Router>
     </Provider>
 )
 
