@@ -5,7 +5,7 @@ export const polls = (state = [], action) => {
         case SET_POLLS:
             return action.polls;
         default:
-            return action;
+            return state;
     }
 }
 
@@ -14,6 +14,6 @@ export const currentPoll = (state = {}, action) => {
         case SET_CURRENT_POLL:
             return action.poll;
         default:
-            return action;
+            return state;
     }
 }
