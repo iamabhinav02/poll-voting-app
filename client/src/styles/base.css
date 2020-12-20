@@ -1,0 +1,17 @@
+:root {
+    --danger: #ff8a80;
+    --blue: #0d47a1;
+    --light: #bbdefb;
+}
+
+body {
+    background-color: var(--light);
+}
+
+.text-label {
+    display: flex;
+    justify-content: center;
+    color: purple;
+    font-size: xx-large;
+    margin: 1rem 0.5rem;
+}

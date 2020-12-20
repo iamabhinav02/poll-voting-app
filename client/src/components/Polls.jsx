@@ -30,12 +30,16 @@ class Polls extends Component {
 		return (
 			<React.Fragment>
 				{auth.isAuthenticated && (
-					<div>
-						<button onClick={getPolls}>All Polls</button>
-						<button onClick={getUserPolls}>My Polls</button>
+					<div className="button-center">
+						<button className="button" onClick={getPolls}>
+							All Polls
+						</button>
+						<button className="button" onClick={getUserPolls}>
+							My Polls
+						</button>
 					</div>
 				)}
-				<ul>{polls}</ul>
+				<ul className="polls">{polls}</ul>
 			</React.Fragment>
 		);
 	}
